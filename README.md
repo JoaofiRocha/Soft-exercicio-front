@@ -27,6 +27,13 @@ npm run dev
 entre em:
 http://localhost:3000
 
+## Login
+Para logar utilize o usuario
+        email: 
+             'joao@gmail.com'
+        senha:
+              '123456'
+
 ## Testes
 
 Para os testes rode:
