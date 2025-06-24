@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 import { getAllBooks } from "@/Services/bookService";
 import { Table, Card, Button, Input, Divider } from "antd";
 import BookModal from './bookModalComponent';
@@ -16,14 +16,16 @@ const BookList = () => {
     const [createBookModalOpen, setCreateBookModalOpen] = useState(false);
 
     useEffect(() => {
-        loadBooks();
-    }, [allBooks]);
-
-
+        const data = getAllBooks();
+        setAllBooks(data);
+    }, []);
 
     useEffect(() => {
-        filterBooks();
-    }, [search]);
+        const filtered = allBooks.filter((b) =>
+            b.title.toLowerCase().includes(search.toLowerCase())
+        );
+        setBooks(filtered);
+    }, [search, allBooks]);
 
     const filterBooks = () => {
         const filtered = allBooks.filter((b) =>
@@ -86,8 +88,8 @@ const BookList = () => {
             <div className='div-table'>
                 <h2 >Livros</h2>
                 <div>
-                <Input className='search-bar' value={search} placeholder="Pesquisar..." onChange={(e) => setSearch(e.target.value)} />
-                <Button type='primary' ghost onClick={() => setCreateBookModalOpen(true)}>Novo Livro</Button>
+                    <Input className='search-bar' value={search} placeholder="Pesquisar..." onChange={(e) => setSearch(e.target.value)} />
+                    <Button type='primary' ghost onClick={() => setCreateBookModalOpen(true)}>Novo Livro</Button>
                 </div>
             </div>
             <Divider />
