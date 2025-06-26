@@ -1,6 +1,6 @@
 # Exercicio Soft Front
 
-Este é um sistema frontend construído com **Next.js**, **React 19**, **Ant Design**, **TailwindCSS** e **Jest**. O sistema permite gerenciar livros, com funcionalidades de cadastro, edição, exclusão, aluguel e visualização.
+Este é um sistema frontend construído com **Next.js**, **React 19**, **Ant Design** e **Jest**. O sistema permite gerenciar livros, com funcionalidades de cadastro, edição, exclusão, aluguel e visualização.
 
 ---
 
