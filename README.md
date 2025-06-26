@@ -34,14 +34,16 @@ Para logar utilize o usuario
         senha:
               '123456'
 
+## Lista de Livros
+Na lista mostra titulo do livro, autor e se esta disponivel para alugar.
+
+Ao lado de cada livro tem o botao de detalhes, onde é possivel ver detalhes, editar, remover e alugar o livro.
+Tem uma barra de pesquisa no canto superior direito, para pesquisar o titulo do livro.
+Além de um botão para adicionar novos livros a lista.
+
+
+
 ## Testes
 
 Para os testes rode:
 npm run test
-
-## Build para Producao 
-para compilar:
-npm run build
-
-para rodar:
-npm run start
